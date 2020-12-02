@@ -36,7 +36,7 @@ ul {
     width: 40px;
     height: 30px;
     margin: 3px;
-
+    border-radius: 5px;
 }
 
 #addition {
@@ -47,4 +47,9 @@ ul {
 
 ::placeholder {
     color:rgb(31, 29, 29)
+}
+
+#AC, #CE {
+    background-color: rgb(212, 129, 50);
+    
 }
