@@ -1,50 +1,56 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Calculator</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css">
 
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        @font-face {
+            font-family: calculator;
+            src: url(/digital-7/digital-7.ttf);
+        }
+    </style>
+</head>
 
-    </head>
+<body>
 
-    <body>
-        
-        <div id='calcContainer'>
-            <input type="text" id='answer' disabled placeholder="0">
-            <ul>
-                <li>
-                    <button class='calcButton' id='AC' onclick='calculatorLogic(AC)' >AC</button>
-                    <button class='calcButton' id='CE' onclick='calculatorLogic(CE)'>CE</button>
-                    <button class='calcButton' id='percent' onclick='calculatorLogic(percent)'>%</button>
-                    <button class='calcButton' id='divide' onclick='calculatorLogic(divide)'>÷</button>
-                </li>
-                <li>
-                    <button class='calcButton' id='seven' onclick='calculatorLogic(7)'>7</button>
-                    <button class='calcButton' id='eight' onclick='calculatorLogic(8)'>8</button>
-                    <button class='calcButton' id='nine' onclick='calculatorLogic(9)'>9</button>
-                    <button class='calcButton' id='multiply' onclick='calculatorLogic(times)'>x</button>
-                </li>
-                <li>
-                    <button class='calcButton' id='four' onclick='calculatorLogic(4)'>4</button>
-                    <button class='calcButton' id='five' onclick='calculatorLogic(5)'>5</button>
-                    <button class='calcButton' id='six' onclick='calculatorLogic(6)'>6</button>
-                    <button class='calcButton' id='subtract' onclick='calculatorLogic(minus)'>-</button>
-                </li>
-                <li>
-                    <button class='calcButton' id='one' onclick='calculatorLogic(1)'>1</button>
-                    <button class='calcButton' id='two' onclick='calculatorLogic(2)'>2</button>
-                    <button class='calcButton' id='three' onclick='calculatorLogic(3)'>3</button>
-                    <button class='calcButton' id='addition' onclick='calculatorLogic(plus)'>+</button>
-                </li>
-                <li>
-                    <button class='calcButton' id='zero' onclick='calculatorLogic(0)'>0</button>
-                    <button class='calcButton' id='decimal' onclick='calculatorLogic(dot)'>.</button>
-                    <button class='calcButton' id='equals' onclick='calculatorLogic(equals)'>=</button>
-                </li>
-            </ul>
-        </div>
+    <div id='calcContainer'>
+        <input type="text" id='answer' disabled placeholder="0">
+        <ul>
+            <li>
+                <button class='calcButton' id='AC' onclick='calculatorLogic(AC)'>AC</button>
+                <button class='calcButton' id='CE' onclick='calculatorLogic(CE)'>CE</button>
+                <button class='calcButton' id='percent' onclick='calculatorLogic(percent)'>%</button>
+                <button class='calcButton' id='divide' onclick='calculatorLogic(divide)'>÷</button>
+            </li>
+            <li>
+                <button class='calcButton' id='seven' onclick='calculatorLogic(7)'>7</button>
+                <button class='calcButton' id='eight' onclick='calculatorLogic(8)'>8</button>
+                <button class='calcButton' id='nine' onclick='calculatorLogic(9)'>9</button>
+                <button class='calcButton' id='multiply' onclick='calculatorLogic(times)'>x</button>
+            </li>
+            <li>
+                <button class='calcButton' id='four' onclick='calculatorLogic(4)'>4</button>
+                <button class='calcButton' id='five' onclick='calculatorLogic(5)'>5</button>
+                <button class='calcButton' id='six' onclick='calculatorLogic(6)'>6</button>
+                <button class='calcButton' id='subtract' onclick='calculatorLogic(minus)'>-</button>
+            </li>
+            <li>
+                <button class='calcButton' id='one' onclick='calculatorLogic(1)'>1</button>
+                <button class='calcButton' id='two' onclick='calculatorLogic(2)'>2</button>
+                <button class='calcButton' id='three' onclick='calculatorLogic(3)'>3</button>
+                <button class='calcButton' id='addition' onclick='calculatorLogic(plus)'>+</button>
+            </li>
+            <li>
+                <button class='calcButton' id='zero' onclick='calculatorLogic(0)'>0</button>
+                <button class='calcButton' id='decimal' onclick='calculatorLogic(dot)'>.</button>
+                <button class='calcButton' id='equals' onclick='calculatorLogic(equals)'>=</button>
+            </li>
+        </ul>
+    </div>
 
-        <script type='text/javascript' src='app.js'></script>
-    </body>
+    <script type='text/javascript' src='app.js'></script>
+</body>
+
 </html>

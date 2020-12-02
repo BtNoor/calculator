@@ -2,7 +2,6 @@ var userInputArray = []
 var display = '';
 var total = 0;
 var userTracker = 0;
-var firstEquation = 0;
 
 const times = ' * '
 const minus = ' - '
@@ -15,7 +14,6 @@ const equals = document.getElementById('equals')
 
 
 function calculatorLogic(input) {
-    console.log(input)
 
     if (userTracker >= 2) {
         display = eval(userInputArray[0] + userInputArray[1] + userInputArray[2])
@@ -24,7 +22,8 @@ function calculatorLogic(input) {
     }
 
 
-    //first this checks if no previous equation is active
+    //Check for math operator, if the user is chaining - then calculate out when you have two sums, set return value as first index of array, then add operator again
+
     if (isNaN(input) == true && userTracker <= 1) {
         if (input == AC) {
             display = ''
@@ -33,7 +32,7 @@ function calculatorLogic(input) {
             total = 0;
         } else if (input == CE) {
             display = ''
-        } else if (input == divide) {
+        } else if (input == divide && display != '' && display != '.') {
 
             if (userTracker >= 1) {
                 userInputArray[2] = display;
@@ -47,7 +46,7 @@ function calculatorLogic(input) {
             userInputArray[1] = divide;
             display = ''
 
-        } else if (input == minus) {
+        } else if (input == minus && display != '' && display != '.') {
 
             if (userTracker >= 1) {
                 userInputArray[2] = display;
@@ -61,7 +60,7 @@ function calculatorLogic(input) {
             userInputArray[1] = minus;
             display = ''
 
-        } else if (input == plus) {
+        } else if (input == plus && display != '' && display != '.') {
 
             if (userTracker >= 1) {
                 userInputArray[2] = display;
@@ -75,7 +74,7 @@ function calculatorLogic(input) {
             userInputArray[1] = plus;
             display = ''
 
-        } else if (input == times) {
+        } else if (input == times && display != '' && display != '.') {
 
             if (userTracker >= 1) {
                 userInputArray[2] = display;
@@ -89,9 +88,9 @@ function calculatorLogic(input) {
             userInputArray[1] = times;
             display = ''
 
-        } else if (input == dot) {
+        } else if (input == dot && display != '' && display != '.') {
             display = display + dot;
-        } else if (input == percent) {
+        } else if (input == percent && display != '' && display != '.') {
 
             if (userTracker >= 1) {
                 userInputArray[2] = display;
@@ -104,8 +103,8 @@ function calculatorLogic(input) {
             userTracker += 1;
             userInputArray[1] = percent;
             display = ''
-            
-        } else if (input == equals) {
+
+        } else if (input == equals && display != '' && display != '.') {
             userInputArray[2] = display;
             userTracker += 1;;
         }
@@ -114,7 +113,7 @@ function calculatorLogic(input) {
 
         display = display + input.toString();
 
-    } 
+    }
 
     if (userTracker >= 2) {
         display = eval(userInputArray[0] + userInputArray[1] + userInputArray[2])
