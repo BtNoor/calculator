@@ -3,10 +3,11 @@ var display = '';
 var total = 0;
 var userTracker = 0;
 
-const times = ' x '
+const times = ' * '
 const minus = ' - '
 const plus = ' + '
 const divide = ' / '
+const percent = ' % '
 const dot = '.'
 const equals = document.getElementById('equals')
 
@@ -26,15 +27,27 @@ function calculatorLogic(input) {
             userInputArray[1] = divide;
             display = ''
         } else if (input == minus) {
-            
+            userInputArray[0] = display;
+            userTracker += 1;
+            userInputArray[1] = minus;
+            display = ''
         } else if (input == plus) {
-
+            userInputArray[0] = display;
+            userTracker += 1;
+            userInputArray[1] = plus;
+            display = ''
         } else if (input == times) {
-
+            userInputArray[0] = display;
+            userTracker += 1;
+            userInputArray[1] = times;
+            display = ''
         } else if (input == dot) {
-
+            display = display + dot;
         } else if (input == percent) {
-
+            userInputArray[0] = display;
+            userTracker += 1;
+            userInputArray[1] = percent;
+            display = ''
         } else if (input == equals) {
             userInputArray[2] = display;
             userTracker += 1;
