@@ -124,8 +124,3 @@ function calculatorLogic(input) {
 
     document.getElementById('answer').placeholder = display
 }
-
-//use eval() on the stored array to convert the string to a mathematical operator
-//E.G eval('225 + 5') returns 230, but ('225 + 5 * 2') equals 235, so on operator press - check if array is larger than [2] 
-//[0] is the first whole number, [1] is the math operator, and
-//[2] is the second number, as soon as this tries to store a fourth thing in the array - do the math, return the math and apply the new maths to the number this returns if the user tries to put more into the calculator
